@@ -45,7 +45,7 @@ void Motor::forward() {
     digitalWrite(in2, LOW);
 }
 
-void Motor::forward(int speed) {
+void Motor::backward(int speed) {
     backward();
     setSpeed(speed);
 }
