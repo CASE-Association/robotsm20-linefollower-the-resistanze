@@ -12,6 +12,7 @@ const int BACKWARD = 1;
 
 class Motor {
     public:
+        Motor(); // Solely to allow the initiation of arrays
         Motor(int pwm, int in1, int in2);
 
         void setSpeed(int speed);

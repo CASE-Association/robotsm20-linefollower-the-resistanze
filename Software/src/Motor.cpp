@@ -5,6 +5,7 @@
 #include "Arduino.h"
 #include "Motor.h"
 
+Motor::Motor() {}
 Motor::Motor(int pwm, int in1, int in2) {
     this->pwm = pwm;
     this->in1 = in1;
