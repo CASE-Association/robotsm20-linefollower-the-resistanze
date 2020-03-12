@@ -5,9 +5,6 @@
 #include "Arduino.h"
 #include "Motor.h"
 
-const int FORWARD = 0;
-const int BACKWARD = 1;
-
 Motor::Motor(int pwm, int in1, int in2) {
     this->pwm = pwm;
     this->in1 = in1;

@@ -7,6 +7,9 @@
 
 #include "Arduino.h"
 
+const int FORWARD = 0;
+const int BACKWARD = 1;
+
 class Motor {
     public:
         Motor(int pwm, int in1, int in2);
