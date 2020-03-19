@@ -1,42 +1,36 @@
+#include <math.h>
 #include <Arduino.h>
-#include "Motor.h"
+#include "MotorDriver.h"
 
-int frequency = 4;
-int ledPin = LED_BUILTIN;
+//int STBY = -1;
 
 int PWMA = 11;
 int AIN1 = 2;
 int AIN2 = 3;
-Motor motorA;
+
+/*
+int PWMB = 0;
+int BIN1 = 0;
+int BIN2 = 0;
+*/
+
+int LEFT = A_MOTOR;
+int RIGHT = B_MOTOR;
+MotorDriver driver;
 
 void setup() {
-    //Serial.begin(9600);
-    pinMode(ledPin, OUTPUT);
+    Serial.begin(9600);
 
     // Motor
-    motorA = Motor(PWMA, AIN1, AIN2);
+    driver = MotorDriver();
+    driver.initMotorA(PWMA, AIN1, AIN2);
+    //driver.initMotorB(PWMB, BIN1, BIN2);
 }
 
 void loop() {
+    int speed = 255 * sin( millis() * 2 * PI / 8000 );
+    driver.setSpeedA(speed);
 
-    // Motor
-    int numberOfSteps = 20;
-    int stepTime = 100;
-
-    for (int i = 0; i <= numberOfSteps; i++) {
-        int speed = (double) i/numberOfSteps * 255;
-
-        motorA.forward(speed);
-        delay(stepTime);
-    }
-
-
-    for (int i = 0; i <= numberOfSteps; i++) {
-        int speed = (double) (numberOfSteps - i)/numberOfSteps * 255;
-
-        motorA.forward(speed);
-        delay(stepTime);
-    }
-
-    delay(1000);
+    Serial.println(speed);
+    delay(100);
 }
