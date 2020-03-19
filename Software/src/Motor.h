@@ -16,13 +16,8 @@ class Motor {
         Motor(int pwm, int in1, int in2);
 
         void setSpeed(int speed);
-        void setDirection(int direction);
-        void drive(int direction, int speed);
 
-        void forward();
         void forward(int speed);
-
-        void backward();
         void backward(int speed);
 
         void shortBreak();

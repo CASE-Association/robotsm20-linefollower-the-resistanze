@@ -17,44 +17,19 @@ Motor::Motor(int pwm, int in1, int in2) {
 }
 
 void Motor::setSpeed(int speed) {
-    analogWrite(pwm, speed);
-}
-
-void Motor::drive(int direction, int speed) {
-    setDirection(direction);
-    setSpeed(speed);
-}
-
-void Motor::setDirection(int direction) {
-    if (direction == FORWARD) {
-        forward();
-    }
-    else if (direction == BACKWARD) {
-        backward();
-    }
-    else {
-        //throw NoSuchDirectionException();
-    }
+    (speed > 0) ? forward(speed) : backward(-speed);
 }
 
 void Motor::forward(int speed) {
-    forward();
-    setSpeed(speed);
-}
-
-void Motor::forward() {
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
+    analogWrite(pwm, speed);
 }
 
 void Motor::backward(int speed) {
-    backward();
-    setSpeed(speed);
-}
-
-void Motor::backward() {
     digitalWrite(in1, LOW);
     digitalWrite(in2, HIGH);
+    analogWrite(pwm, speed);
 }
 
 void Motor::shortBreak() {
