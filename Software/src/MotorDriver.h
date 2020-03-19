@@ -15,7 +15,7 @@ const int NUM_OF_MOTORS = 2;
 
 class MotorDriver {
     public:
-        MotorDriver(int standby, boolean enable);
+        MotorDriver(int standby = -1, boolean enable = false);
 
         void enable();
         void disable();
@@ -23,6 +23,10 @@ class MotorDriver {
         void initMotorA(int pwm, int in1, int in2);
         void initMotorB(int pwm, int in1, int in2);
         void initMotor(int motor, int pwm, int in1, int in2);
+
+        void setSpeedA(int speed);
+        void setSpeedB(int speed);
+        void setSpeed(int motor, int speed);
     private:
         int standby;
         Motor motors [NUM_OF_MOTORS];
