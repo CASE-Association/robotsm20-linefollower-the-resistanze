@@ -9,3 +9,4 @@ Components used for the project **MUST** be logged in this file!
 | 1             | Motor Driver     | TB6612FNG          |
 | 2             | Motor            | 1000 RPM           |
 | 1             | Sensor           | Jsumo XLine        |
+| 1             | Motor holder     | Bracket pair       |
