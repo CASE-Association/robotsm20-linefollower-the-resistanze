@@ -8,29 +8,27 @@ int PWMA = 11;
 int AIN1 = 2;
 int AIN2 = 3;
 
-/*
-int PWMB = 0;
-int BIN1 = 0;
-int BIN2 = 0;
-*/
+int PWMB = 10;
+int BIN1 = 4;
+int BIN2 = 5;
 
 int LEFT = A_MOTOR;
 int RIGHT = B_MOTOR;
 MotorDriver driver;
 
 void setup() {
-    Serial.begin(9600);
-
     // Motor
     driver = MotorDriver();
     driver.initMotorA(PWMA, AIN1, AIN2);
-    //driver.initMotorB(PWMB, BIN1, BIN2);
+    driver.initMotorB(PWMB, BIN1, BIN2);
 }
 
 void loop() {
-    int speed = 255 * sin( millis() * 2 * PI / 8000 );
-    driver.setSpeedA(speed);
+    int leftSpeed = 255 * sin( millis() * 2 * PI / 8000 );
+    int rightSpeed = 255 * cos( millis() * 2 * PI / 8000 );
 
-    Serial.println(speed);
+    driver.setSpeed(LEFT, leftSpeed);
+    driver.setSpeed(RIGHT, rightSpeed);
+
     delay(100);
 }
