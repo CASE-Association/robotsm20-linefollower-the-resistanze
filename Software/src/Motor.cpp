@@ -16,6 +16,10 @@ Motor::Motor(int pwm, int in1, int in2) {
     pinMode(in2, OUTPUT);
 }
 
+void Motor::setSpeed(int speed) {
+    analogWrite(pwm, speed);
+}
+
 void Motor::drive(int direction, int speed) {
     setDirection(direction);
     setSpeed(speed);
