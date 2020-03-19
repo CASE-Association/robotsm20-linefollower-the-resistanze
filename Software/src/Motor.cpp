@@ -2,7 +2,7 @@
  * Motor Class for Motor Driver TB6612FNG
  */
 
-#include "Arduino.h"
+#include <Arduino.h>
 #include "Motor.h"
 
 Motor::Motor() {}

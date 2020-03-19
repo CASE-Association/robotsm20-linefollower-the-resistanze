@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "Motor.h"
 
 int frequency = 4;
 int ledPin = LED_BUILTIN;

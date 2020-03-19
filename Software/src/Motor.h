@@ -5,7 +5,7 @@
 #ifndef Motor_h
 #define Motor_h
 
-#include "Arduino.h"
+#include <Arduino.h>
 
 const int FORWARD = 0;
 const int BACKWARD = 1;
