@@ -1,7 +1,5 @@
 #include "SumoSensor.h"
 
-// Implement Isak's clever idea
-
 SumoSensor::SumoSensor(int pinD1, int pinD2, int pinD3, int pinD4, int pinA) {
     this->pinD1 = pinD1;
     this->pinD2 = pinD2;
@@ -9,7 +7,7 @@ SumoSensor::SumoSensor(int pinD1, int pinD2, int pinD3, int pinD4, int pinA) {
     this->pinD4 = pinD4;
     this->pinA = pinA;
     
-    pinMode(pinD1, OUTPUT); 
+    pinMode(pinD1, OUTPUT);
     pinMode(pinD2, OUTPUT);
     pinMode(pinD3, OUTPUT);
     pinMode(pinD4, OUTPUT);
@@ -26,6 +24,7 @@ int SumoSensor::getValue(int nr) {
 
     return analogRead(this->pinA);
 }
+
 
 long SumoSensor::getWeightedAvg() {
     long val = 0;
