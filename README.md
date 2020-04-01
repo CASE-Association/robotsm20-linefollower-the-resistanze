@@ -8,7 +8,7 @@
 > A cheatsheet by *Adam Pritchard* for writing Markdown can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Goals 
-The goal for this project is to create a line following robot which can compete in Robot SM 2020 and not be last. In doing so we hope to further develop our knowledge in programming, CADing and development of cyber physical systems.
+The goal for this project is to create a line following robot which can compete in Robot SM 2020 and come in last place. In doing so we hope to further develop our knowledge in programming, CADing and development of cyber physical systems.
 
 
 ## Directories 
