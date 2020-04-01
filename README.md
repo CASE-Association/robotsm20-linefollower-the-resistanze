@@ -8,19 +8,8 @@
 > A cheatsheet by *Adam Pritchard* for writing Markdown can be found [here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## Goals 
-> Write something about the goals of this project and what you want to achieve. 
-> Can be something like this:
-```
-- Utilize more advanced control algorithm.
-    - Acceleration control
-        - Speed trajectory planner
-    - MPC - Model Predictive Conrol (*optional*)
-- Reach the moon 
-    - With two humans at least 
-- Added hardware and improvements
-    - 2 MW of power 
-    - nRF24 communication
-```
+The goal for this project is to create a line following robot which can compete in Robot SM 2020 and not be last. In doing so we hope to further develop our knowledge in programming, CADing and development of cyber physical systems.
+
 
 ## Directories 
 ```
