@@ -10,3 +10,4 @@ Components used for the project **MUST** be logged in this file!
 | 2             | Motor            | 1000 RPM           |
 | 1             | Sensor           | Jsumo XLine        |
 | 1             | Motor holder     | Bracket pair       |
+| 1             | Wheels           | Orange rubber wheels|
